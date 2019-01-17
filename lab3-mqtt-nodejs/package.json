@@ -1,5 +1,5 @@
 {
-  "name": "lab7-mqtt",
+  "name": "lab3-mqtt-sensor",
   "version": "1.0.0",
   "description": "Reading temperature and humidity from HTU21D I2C sensor module and publishing them through MQTT",
   "main": "mqtt-sensor.js",
