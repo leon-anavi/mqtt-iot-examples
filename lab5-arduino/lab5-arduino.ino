@@ -80,7 +80,6 @@ void publishSensorData(const char* subTopic, const char* key, const float value)
   json[key] = value;
   json.printTo((char*)payload, json.measureLength() + 1);
   char topic[200];
-  //sprintf(topic,"%s/%s/%s", workgroup, machineId, subTopic);
   sprintf(topic,"home/room/%s", subTopic);
   mqttClient.publish(topic, payload, true);
 }
