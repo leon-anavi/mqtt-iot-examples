@@ -14,7 +14,7 @@ const long sensorInterval = 5000;
 //WiFi
 const char* ssid = "test";
 const char* password = "password";
-const char* mqtt_server = "192.168.4.183";
+const char* mqtt_server = "iot.eclipse.org";
 
 //MQTT
 WiFiClient espClient;
@@ -28,6 +28,7 @@ void connectWiFi() {
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
 
   while (WiFi.status() != WL_CONNECTED) {
